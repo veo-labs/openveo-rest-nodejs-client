@@ -1,0 +1,29 @@
+# Linux
+.directory
+*~
+.*.swp
+
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Windows XP
+ehthumbs.db
+
+# Logs
+*.log
+
+# Project npm dependencies
+/node_modules
+
+# IDE
+nbproject/
+
+# Documentation
+/site
+/.grunt
