@@ -1,0 +1,38 @@
+# Linux
+# *.swp is already ignored by npm
+.directory
+*~
+
+# OS X
+# .DS_Store* and ._* are already ignored by npm
+Icon?
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Windows XP
+ehthumbs.db
+
+# Logs
+*.log
+
+# Project npm dependencies
+/node_modules
+
+# IDE
+nbproject
+
+# Grunt files
+/Gruntfile.js
+/tasks
+
+# Git
+.gitignore
+.gitattributes
+
+# Eslint
+.eslintrc
+
+# Documentation
+/site
