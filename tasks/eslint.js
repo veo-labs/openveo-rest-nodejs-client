@@ -9,6 +9,7 @@ module.exports = {
     src: [
       'Gruntfile.js',
       'index.js',
+      'processRequire.js',
       'tasks/**/*.js',
       'tests/**/*.js',
       'lib/**/*.js'
