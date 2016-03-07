@@ -1,7 +1,7 @@
 'use strict';
 
 require('./processRequire.js');
-var fs = require('fs');
+const fs = require('fs');
 
 /**
  * Loads a bunch of grunt configuration files from the given directory.
@@ -13,10 +13,10 @@ var fs = require('fs');
  * @return {Object} The list of configurations indexed by filename without the extension
  */
 function loadConfig(path) {
-  var configuration = {};
-  var configurationFiles = fs.readdirSync(path);
+  const configuration = {};
+  const configurationFiles = fs.readdirSync(path);
 
-  for (let configurationFile of configurationFiles)
+  for (const configurationFile of configurationFiles)
     configuration[configurationFile.replace(/\.js$/, '')] = require(`${path}/${configurationFile}`);
 
   return configuration;
@@ -25,8 +25,8 @@ function loadConfig(path) {
 /**
  * Initializes grunt, load extensions and register tasks.
  */
-module.exports = grunt => {
-  var config = {
+module.exports = (grunt) => {
+  const config = {
     pkg: grunt.file.readJSON('package.json'),
     env: process.env
   };
