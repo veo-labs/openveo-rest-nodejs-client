@@ -1,6 +1,6 @@
 {
   "name": "@openveo/rest-nodejs-client",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "NodeJS REST client for OpenVeo Web Service",
   "keywords": [
     "openveo",
