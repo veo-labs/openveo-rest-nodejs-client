@@ -1,0 +1,840 @@
+{
+    "project": {
+        "name": "OpenVeo REST NodeJS client API",
+        "description": "OpenVeo REST NodeJS client API to interact with OpenVeo web service",
+        "version": "1.0.0"
+    },
+    "files": {
+        "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/AuthenticationError.js": {
+            "name": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/AuthenticationError.js",
+            "modules": {},
+            "classes": {
+                "AuthenticationError": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js": {
+            "name": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js",
+            "modules": {},
+            "classes": {
+                "RequestError": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/doc.js": {
+            "name": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/doc.js",
+            "modules": {
+                "errors": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js": {
+            "name": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "modules": {
+                "rest-client": 1
+            },
+            "classes": {
+                "OpenVeoClient": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js": {
+            "name": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "modules": {},
+            "classes": {
+                "Request": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "errors": {
+            "name": "errors",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "AuthenticationError": 1,
+                "RequestError": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 3,
+            "description": "All REST-nodejs-client specific errors.",
+            "itemtype": "main"
+        },
+        "rest-client": {
+            "name": "rest-client",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "OpenVeoClient": 1,
+                "Request": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 5,
+            "description": "REST client for OpenVeo web service.\n\nIt aims to facilitate the interaction with OpenVeo web service. All authentication aspects are managed by the\nclient and are transparent to the user. Requesting an end point, without being authenticated will automatically\nauthenticate first before calling the end point. If token expired, a new authentication is made automatically.",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "AuthenticationError": {
+            "name": "AuthenticationError",
+            "shortname": "AuthenticationError",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "errors",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/AuthenticationError.js",
+            "line": 6,
+            "description": "Defines an AuthenticationError.\n\nAuthentication errors are thrown when client failed to authenticate to the web service.",
+            "extends": "RequestError"
+        },
+        "RequestError": {
+            "name": "RequestError",
+            "shortname": "RequestError",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "errors",
+            "namespace": "",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 3,
+            "description": "Defines a RequestError.\n\nRequest errors are thrown when a request to the Web Service failed.",
+            "extends": "Error"
+        },
+        "OpenVeoClient": {
+            "name": "OpenVeoClient",
+            "shortname": "OpenVeoClient",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 27,
+            "description": "REST client for OpenVeo web service.\n\nIt aims to facilitate the interaction with OpenVeo web service. All authentication aspects are managed by the\nclient and are transparent to the user. Requesting an end point, without being authenticated will automatically\nauthenticate first before calling the end point. If token expired, a new authentication is made automatically.",
+            "mainName": "rest-client",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "Request": {
+            "name": "Request",
+            "shortname": "Request",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 5,
+            "description": "A web service request.",
+            "mainName": "rest-client",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/AuthenticationError.js",
+            "line": 17,
+            "description": "Creates an authentication request error.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "message",
+                    "description": "The error message",
+                    "type": "String"
+                }
+            ],
+            "class": "AuthenticationError",
+            "module": "errors"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 14,
+            "description": "Creates a request error with a message and http code.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "message",
+                    "description": "The error message",
+                    "type": "String"
+                },
+                {
+                    "name": "httpCode",
+                    "description": "The HTTP error code",
+                    "type": "Number"
+                }
+            ],
+            "class": "RequestError",
+            "module": "errors"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 11,
+            "description": "Rejects all requests with the given error.\n\nIf the request is running, it will be aborted.",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "requests",
+                    "description": "The list of requests to reject",
+                    "type": "Set"
+                },
+                {
+                    "name": "error",
+                    "description": "The reject's error",
+                    "type": "Error"
+                }
+            ],
+            "class": "OpenVeoClient",
+            "module": "errors"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 40,
+            "description": "Creates a client to connect to OpenVeo web service.",
+            "example": [
+                "\n\n    const OpenVeoClient = require('@openveo/rest-nodejs-client').OpenVeoClient;\n    const client = new OpenVeoClient(\n                'https://www.openveo-web-service:443',\n                'client id',\n                'client secret',\n                '/home/test/server.crt'\n    );"
+            ],
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "webServiceUrl",
+                    "description": "The complete url of the OpenVeo web service (with protocol and port)",
+                    "type": "String"
+                },
+                {
+                    "name": "clientId",
+                    "description": "Application client id",
+                    "type": "String"
+                },
+                {
+                    "name": "clientSecret",
+                    "description": "Application client",
+                    "type": "String"
+                },
+                {
+                    "name": "certificate",
+                    "description": "Path to the web service server trusted certificate file",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "throws": {
+                "description": "Thrown if webServiceUrl, clientId or clientSecret is not a valid String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 82,
+            "description": "Web service protocol, either \"http\" or \"https\".",
+            "itemtype": "property",
+            "name": "protocol",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 90,
+            "description": "Web service server host name.",
+            "itemtype": "property",
+            "name": "hostname",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 98,
+            "description": "Web service server port.",
+            "itemtype": "property",
+            "name": "port",
+            "type": "Number",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 106,
+            "description": "Web service server url.",
+            "itemtype": "property",
+            "name": "url",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 114,
+            "description": "Application client id.",
+            "itemtype": "property",
+            "name": "clientId",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 122,
+            "description": "Application client secret.",
+            "itemtype": "property",
+            "name": "clientSecret",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 130,
+            "description": "Encoded credentials ready for OAuth authentication.",
+            "itemtype": "property",
+            "name": "credentials",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 138,
+            "description": "Application access token provided by the web service.",
+            "itemtype": "property",
+            "name": "accessToken",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 146,
+            "description": "Path to the web service server certificate file.",
+            "itemtype": "property",
+            "name": "certificate",
+            "type": "String",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 154,
+            "description": "The collection of queued requests waiting to be executed.",
+            "itemtype": "property",
+            "name": "queuedRequests",
+            "type": "Set",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 162,
+            "description": "Maximum number of authentication attempts to perform on a request in case of an invalid or expired token.",
+            "itemtype": "property",
+            "name": "maxAuthenticationAttempts",
+            "type": "Number",
+            "default": "1",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 173,
+            "description": "The authenticate request to get an access token.",
+            "itemtype": "property",
+            "name": "authenticateRequest",
+            "type": "Request",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 191,
+            "description": "Executes a GET request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with result as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 208,
+            "description": "Executes a POST request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "post",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 226,
+            "description": "Executes a PUT request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "put",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 244,
+            "description": "Executes a DELETE request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "delete",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 261,
+            "description": "Executes a REST request after making sure the client is authenticated.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed and request is retried.",
+            "itemtype": "method",
+            "name": "executeRequest",
+            "async": 1,
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "method",
+                    "description": "The HTTP method to use (either get, post, delete or put)",
+                    "type": "String"
+                },
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with request's response",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if method or endPoint is not a valid String",
+                "type": "TypeError"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 297,
+            "description": "Indicates if the client is authenticated to the web service or not.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "isAuthenticated",
+            "return": {
+                "description": "true if the client is authenticated, false otherwise",
+                "type": "Boolean"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 308,
+            "description": "Authenticates the client to the web service.",
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "itemtype": "method",
+            "name": "authenticate",
+            "return": {
+                "description": "Promise resolving when the client is authenticated, promise is rejected if authentication\nfailed",
+                "type": "Promise"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 345,
+            "description": "Authenticates client to the web service and execute all queued requests.",
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 350,
+            "description": "Interprets response results to get a human readable error message.",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "Web service response with an eventually error property and an httpCode property",
+                    "type": "Object"
+                },
+                {
+                    "name": "request",
+                    "description": "The request associated to the result",
+                    "type": "Request"
+                }
+            ],
+            "return": {
+                "description": "The error message",
+                "type": "String|Null"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 447,
+            "description": "Builds a request.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "buildRequest",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "resolve",
+                    "description": "The function to call with request's result",
+                    "type": "Function"
+                },
+                {
+                    "name": "reject",
+                    "description": "The function to call if request fails",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "The request, ready to be executed",
+                "type": "Request"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 14,
+            "description": "Creates a REST request which can be executed / aborted.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "protocol",
+                    "description": "The protocol to use for the request (either 'http' or 'https')",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The complete list of http(s) options as described by NodeJS http.request\ndocumentation. More headers can be added when executing the request.",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "String|Object",
+                    "optional": true
+                }
+            ],
+            "throws": {
+                "description": "Thrown if protocol is not valid or options is not a valid object",
+                "type": "TypeError"
+            },
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 36,
+            "description": "Request protocol either \"http\" or \"https\".",
+            "itemtype": "property",
+            "name": "protocol",
+            "type": "String",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 44,
+            "description": "Request options.",
+            "itemtype": "property",
+            "name": "options",
+            "type": "Object",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 52,
+            "description": "The request body.",
+            "itemtype": "property",
+            "name": "body",
+            "type": "String",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 60,
+            "description": "The HTTP(S) request.",
+            "itemtype": "property",
+            "name": "request",
+            "type": "ClientRequest",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 68,
+            "description": "Maximum execution time for the request (in ms).",
+            "itemtype": "property",
+            "name": "executionTimeout",
+            "type": "Number",
+            "default": "10000",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 77,
+            "description": "Maximum time to wait until the request is aborted (in ms).",
+            "itemtype": "property",
+            "name": "abortTimeout",
+            "type": "Number",
+            "default": "2000",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 86,
+            "description": "Indicates if request is actually running.",
+            "itemtype": "property",
+            "name": "isRunning",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 95,
+            "description": "The number of attempts made on this request.",
+            "itemtype": "property",
+            "name": "attempts",
+            "type": "Number",
+            "default": "0",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 107,
+            "description": "Executes the request.\n\nBe careful, if request is executed while still running, the running one will be aborted.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "execute",
+            "params": [
+                {
+                    "name": "headers",
+                    "description": "A list of http(s) headers. Headers will be merged with Request headers set in\nthe constructor",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with request's response as an Object, all request's responses are\nconsidered success, promise is rejected only if an error occured during the transfer or while parsing the\nreponse's body (expected JSON)",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if options is not a valid object",
+                "type": "TypeError"
+            },
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js",
+            "line": 175,
+            "description": "Aborts the request.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "abort",
+            "return": {
+                "description": "Promise resolving when request has been aborted, promise is rejected if it takes too long\nto abort the request",
+                "type": "Promise"
+            },
+            "class": "Request",
+            "module": "rest-client"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nCreates an authentication request error.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/AuthenticationError.js:17"
+        },
+        {
+            "message": "Missing item type\nCreates a request error with a message and http code.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/errors/RequestError.js:14"
+        },
+        {
+            "message": "Missing item type\nRejects all requests with the given error.\n\nIf the request is running, it will be aborted.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js:11"
+        },
+        {
+            "message": "Missing item type\nCreates a client to connect to OpenVeo web service.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js:40"
+        },
+        {
+            "message": "Missing item type\nAuthenticates client to the web service and execute all queued requests.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js:345"
+        },
+        {
+            "message": "Missing item type\nInterprets response results to get a human readable error message.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/OpenVeoClient.js:350"
+        },
+        {
+            "message": "Missing item type\nCreates a REST request which can be executed / aborted.",
+            "line": " /home/developer/workspace/openveo-core/node_modules/@openveo/rest-nodejs-client/lib/Request.js:14"
+        }
+    ]
+}

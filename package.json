@@ -1,0 +1,45 @@
+{
+  "name": "@openveo/rest-nodejs-client",
+  "version": "1.0.0",
+  "description": "NodeJS REST client for OpenVeo Web Service",
+  "keywords": [
+    "openveo",
+    "nodejs",
+    "rest",
+    "restfull",
+    "client",
+    "web service"
+  ],
+  "homepage": "https://github.com/veo-labs/openveo-rest-nodejs-client",
+  "bugs": {
+    "url": "https://github.com/veo-labs/openveo-rest-nodejs-client/issues"
+  },
+  "license": "AGPL-3.0",
+  "author": "Veo-Labs <info@veo-labs.com> (http://www.veo-labs.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veo-labs/openveo-rest-nodejs-client.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-yuidoc": "1.0.0",
+    "grunt-eslint": "18.1.0",
+    "grunt-extend-config": "0.9.3",
+    "grunt-gh-pages": "1.1.0",
+    "pre-commit": "1.1.2",
+    "yuidoc-theme-blue": "0.1.9"
+  },
+  "scripts": {
+    "postpublish": "grunt deploy-doc",
+    "eslint": "grunt eslint"
+  },
+  "precommit": [
+    "eslint"
+  ],
+  "engines": {
+    "node": "4.*",
+    "npm": "2.5.0 - 2.14.7"
+  }
+}

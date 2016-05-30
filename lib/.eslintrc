@@ -1,0 +1,9 @@
+{
+
+  "rules": {
+
+    // Deactivate camel case verification as OAuth does not use camel case properties
+    "camelcase": 0,
+
+  }
+}
