@@ -1,5 +1,6 @@
 'use strict';
 
+/* eslint no-sync: 0 */
 require('./processRequire.js');
 const fs = require('fs');
 
