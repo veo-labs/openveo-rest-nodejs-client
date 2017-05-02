@@ -36,3 +36,6 @@ nbproject
 
 # Documentation
 /site
+
+# Compiled files
+/.grunt
