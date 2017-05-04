@@ -11,14 +11,12 @@ Icon?
 # Windows
 Thumbs.db
 Desktop.ini
-
-# Windows XP
 ehthumbs.db
 
 # Logs
 *.log
 
-# Project npm dependencies
+# NPM dependencies
 /node_modules
 
 # IDE
@@ -27,5 +25,5 @@ nbproject/
 # Documentation
 /site
 
-# Compiled files
+# Grunt
 /.grunt
