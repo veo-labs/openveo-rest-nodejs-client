@@ -6,7 +6,7 @@ OpenVeo REST NodeJS client to interact with [OpenVeo](https://github.com/veo-lab
 
 ## Installation
 
-Install the latest version with :
+Install the latest version with:
 
     npm install @openveo/rest-nodejs-client
 
@@ -38,7 +38,7 @@ Documentation is available on [Github pages](http://veo-labs.github.io/openveo-r
 
 # Contributors
 
-Maintainer : [Veo-Labs](http://www.veo-labs.com/)
+Maintainer: [Veo-Labs](http://www.veo-labs.com/)
 
 # License
 
