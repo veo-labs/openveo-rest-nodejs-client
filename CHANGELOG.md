@@ -1,3 +1,9 @@
+# 2.0.1 / YYYY-MM-DD
+
+## BUG FIXES
+
+- Empty body response from web service no longer reject the promise
+
 # 2.0.0 / 2017-05-04
 
 ## BREAKING CHANGES
