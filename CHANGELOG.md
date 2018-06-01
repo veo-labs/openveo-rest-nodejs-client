@@ -1,4 +1,8 @@
-# 2.0.1 / YYYY-MM-DD
+# 2.1.0 / YYYY-MM-DD
+
+## NEW FEATURES
+
+- require('@openveo/rest-nodejs-client').RestClient can now be used to implement a REST client without taking care of queue and requests processing
 
 ## BUG FIXES
 
