@@ -7,6 +7,7 @@
 ## BUG FIXES
 
 - Empty body response from web service no longer reject the promise
+- Requests responding with an HTTP code greater than or equal to 400, are now treated as errors even if no *error* property is present in the response
 
 # 2.0.0 / 2017-05-04
 
