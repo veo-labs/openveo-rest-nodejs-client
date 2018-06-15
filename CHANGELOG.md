@@ -1,4 +1,9 @@
-# 2.1.0 / YYYY-MM-DD
+# 3.0.0 / YYYY-MM-DD
+
+## BREAKING CHANGES
+
+- Drop support for Node.js &lt;8.9.4
+- Drop support for NPM &lt;5.6.0
 
 ## NEW FEATURES
 
