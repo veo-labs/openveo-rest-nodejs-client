@@ -1,3 +1,9 @@
+# 3.1.0 / YYYY-MM-DD
+
+## NEW FEATURES
+
+- Headers set by the RestClient can now be overriden for each request
+
 # 3.0.0 / 2018-06-15
 
 ## BREAKING CHANGES
