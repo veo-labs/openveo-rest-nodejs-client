@@ -6,6 +6,10 @@
 - Add more control on request timeouts. A specific timeout can be set on each request instead of the default one (10 seconds), timeout can also be deactivated using Infinity value
 - Add multipart/form-data support for post(), patch() and put() requests
 
+## BUG FIXES
+
+- Fix the "Unknown error" message when the error is identified. Message now includes the OpenVeo error code and concerned module name, when known
+
 # 3.0.0 / 2018-06-15
 
 ## BREAKING CHANGES
