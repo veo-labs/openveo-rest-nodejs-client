@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/veo-labs/openveo-rest-nodejs-client.git"
   },
+  "dependencies": {
+    "form-data": "2.3.2"
+  },
   "devDependencies": {
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",

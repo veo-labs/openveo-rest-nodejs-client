@@ -3,6 +3,8 @@
 ## NEW FEATURES
 
 - Headers set by the RestClient can now be overriden for each request
+- Add more control on request timeouts. A specific timeout can be set on each request instead of the default one (10 seconds), timeout can also be deactivated using Infinity value
+- Add multipart/form-data support for post(), patch() and put() requests
 
 # 3.0.0 / 2018-06-15
 
