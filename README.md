@@ -34,7 +34,7 @@ client.get('publish/videos?page=1&limit=10').then((result) => {
 
 # API
 
-Documentation is available on [Github pages](http://veo-labs.github.io/openveo-rest-nodejs-client/3.0.0/index.html).
+Documentation is available on [Github pages](http://veo-labs.github.io/openveo-rest-nodejs-client/3.1.0/index.html).
 
 # Contributors
 
