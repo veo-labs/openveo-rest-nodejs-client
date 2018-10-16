@@ -1,0 +1,1043 @@
+{
+    "project": {
+        "name": "OpenVeo REST NodeJS client API",
+        "description": "OpenVeo REST NodeJS client API to interact with OpenVeo web service",
+        "version": "3.1.0"
+    },
+    "files": {
+        "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/AuthenticationError.js": {
+            "name": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/AuthenticationError.js",
+            "modules": {},
+            "classes": {
+                "AuthenticationError": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js": {
+            "name": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js",
+            "modules": {},
+            "classes": {
+                "RequestError": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js": {
+            "name": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "modules": {
+                "rest-client": 1
+            },
+            "classes": {
+                "OpenVeoClient": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js": {
+            "name": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "modules": {},
+            "classes": {
+                "Request": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js": {
+            "name": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "modules": {},
+            "classes": {
+                "RestClient": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "rest-client": {
+            "name": "rest-client",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "AuthenticationError": 1,
+                "RequestError": 1,
+                "OpenVeoClient": 1,
+                "Request": 1,
+                "RestClient": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 36,
+            "description": "Defines a client to connect to OpenVeo web service.",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "AuthenticationError": {
+            "name": "AuthenticationError",
+            "shortname": "AuthenticationError",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/AuthenticationError.js",
+            "line": 12,
+            "description": "Creates an authentication request error.\n\nAuthentication errors are thrown when client failed to authenticate to the web service.",
+            "extends": "RequestError",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "message",
+                    "description": "The error message",
+                    "type": "String"
+                }
+            ]
+        },
+        "RequestError": {
+            "name": "RequestError",
+            "shortname": "RequestError",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 9,
+            "description": "Creates a request error with a message and http code.\n\nRequest errors are thrown when a request to the Web Service failed.",
+            "extends": "Error",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "message",
+                    "description": "The error message",
+                    "type": "String"
+                },
+                {
+                    "name": "httpCode",
+                    "description": "The HTTP error code",
+                    "type": "Number"
+                }
+            ]
+        },
+        "OpenVeoClient": {
+            "name": "OpenVeoClient",
+            "shortname": "OpenVeoClient",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 14,
+            "description": "Creates a client to connect to OpenVeo web service.\n\nIt aims to facilitate the interaction with OpenVeo web service. All authentication aspects are managed by the\nclient and are transparent to the user. Requesting an end point, without being authenticated, will automatically\nauthenticate first before calling the end point. If token expired, a new authentication is made automatically.",
+            "example": [
+                "\n\n    const OpenVeoClient = require('@openveo/rest-nodejs-client').OpenVeoClient;\n    const client = new OpenVeoClient(\n                'https://www.openveo-web-service:443',\n                'client id',\n                'client secret',\n                '/absolute/path/to/fullchain/certificate.crt'\n    );"
+            ],
+            "extends": "RestClient",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "webServiceUrl",
+                    "description": "The complete URL of the OpenVeo Web Service (with protocol and port)",
+                    "type": "String"
+                },
+                {
+                    "name": "clientId",
+                    "description": "Application's client id",
+                    "type": "String"
+                },
+                {
+                    "name": "clientSecret",
+                    "description": "Application's client secret",
+                    "type": "String"
+                },
+                {
+                    "name": "certificate",
+                    "description": "Absolute path to the web service server full chain certificate file",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "throws": {
+                "description": "Thrown if webServiceUrl, clientId or clientSecret is not a valid String",
+                "type": "TypeError"
+            }
+        },
+        "Request": {
+            "name": "Request",
+            "shortname": "Request",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 12,
+            "description": "Creates a REST request which can be executed / aborted.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "protocol",
+                    "description": "The protocol to use for the request (either 'http' or 'https')",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The complete list of http(s) options as described by NodeJS http.request\ndocumentation. More headers can be added when executing the request.",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "String|Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "throws": {
+                "description": "Thrown if protocol is not valid or options is not a valid object",
+                "type": "TypeError"
+            }
+        },
+        "RestClient": {
+            "name": "RestClient",
+            "shortname": "RestClient",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "rest-client",
+            "namespace": "",
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 36,
+            "description": "Creates a client to connect to REST web service.\n\nIt aims to facilitate implementation of a REST web service client. Requesting an end point, without being\nauthenticated, will automatically execute the *authenticateRequest* first before calling the end point.\nIf token expired, a new authentication is made automatically.\n\nYou MUST:\n- Extend this class\n- Define a *authenticateRequest* property with a Request as a value. This will be automatically called by\n  the RestClient to get an access token from the server (response from server should contain the property\n  *access_token* containing the access token which will be stored in RestClient *accessToken* property and used\n  for all subsequent requests). Use *buildRequest* function to create the authenticate request\n- Make sure that the web service server returns a property *error_description* set to \"Token not found or expired\"\n  if token couln't be retrieved\n- Make sure that the web service server returns a property *error_description* set to \"Token already expired\"\n  if token has expired\n\nYou MAY:\n- Override function *getAuthenticationHeaders*. By default the list of headers returned by\n  *getAuthenticationHeaders* function will be added to all requests sent to the server. One of this header may be\n  the authentication header for example",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "webServiceUrl",
+                    "description": "The complete URL of the REST web service (with protocol and port)",
+                    "type": "String"
+                },
+                {
+                    "name": "certificate",
+                    "description": "Absolute path to the web service server full chain certificate file",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "throws": {
+                "description": "Thrown if webServiceUrl is not a valid String",
+                "type": "TypeError"
+            }
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 26,
+            "description": "The HTTP error code associated to this error.",
+            "itemtype": "property",
+            "name": "httpCode",
+            "type": "Number",
+            "final": 1,
+            "class": "RequestError",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 35,
+            "description": "Error message.",
+            "itemtype": "property",
+            "name": "message",
+            "type": "String",
+            "final": 1,
+            "class": "RequestError",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/errors/RequestError.js",
+            "line": 44,
+            "description": "Error name.",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "final": 1,
+            "class": "RequestError",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 51,
+            "description": "Application client id.",
+            "itemtype": "property",
+            "name": "clientId",
+            "type": "String",
+            "final": 1,
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 60,
+            "description": "Application client secret.",
+            "itemtype": "property",
+            "name": "clientSecret",
+            "type": "String",
+            "final": 1,
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 69,
+            "description": "Encoded credentials ready for OAuth authentication.",
+            "itemtype": "property",
+            "name": "credentials",
+            "type": "String",
+            "final": 1,
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 80,
+            "description": "The authenticate request to get an access token.",
+            "itemtype": "property",
+            "name": "authenticateRequest",
+            "type": "Request",
+            "final": 1,
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/OpenVeoClient.js",
+            "line": 99,
+            "description": "Gets the list of headers to send with each request.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getAuthenticationHeaders",
+            "return": {
+                "description": "The list of headers to add to all requests sent to the server",
+                "type": "Object"
+            },
+            "class": "OpenVeoClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 38,
+            "description": "Request protocol either \"http\" or \"https\".",
+            "itemtype": "property",
+            "name": "protocol",
+            "type": "String",
+            "final": 1,
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 47,
+            "description": "Request options.",
+            "itemtype": "property",
+            "name": "options",
+            "type": "Object",
+            "final": 1,
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 56,
+            "description": "The request body.",
+            "itemtype": "property",
+            "name": "body",
+            "type": "String",
+            "final": 1,
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 65,
+            "description": "The HTTP(S) request.",
+            "itemtype": "property",
+            "name": "request",
+            "type": "ClientRequest",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 73,
+            "description": "Maximum execution time for the request (in ms).",
+            "itemtype": "property",
+            "name": "executionTimeout",
+            "type": "Number",
+            "default": "10000",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 82,
+            "description": "Maximum time to wait until the request is aborted (in ms).",
+            "itemtype": "property",
+            "name": "abortTimeout",
+            "type": "Number",
+            "default": "2000",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 91,
+            "description": "Indicates if request is actually running.",
+            "itemtype": "property",
+            "name": "isRunning",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 100,
+            "description": "The number of attempts made on this request.",
+            "itemtype": "property",
+            "name": "attempts",
+            "type": "Number",
+            "default": "0",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 109,
+            "description": "Indicates if request body must be sent as multipart/form-data.",
+            "itemtype": "property",
+            "name": "multiparted",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 121,
+            "description": "Executes the request.\n\nBe careful, if request is executed while still running, the running one will be aborted.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "execute",
+            "params": [
+                {
+                    "name": "headers",
+                    "description": "A list of http(s) headers. Headers will be merged with Request headers set in\nthe constructor",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with request's response as an Object, all request's responses are\nconsidered success, promise is rejected only if an error occured during the transfer or while parsing the\nreponse's body (expected JSON)",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if options is not a valid object",
+                "type": "TypeError"
+            },
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/Request.js",
+            "line": 216,
+            "description": "Aborts the request.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "abort",
+            "return": {
+                "description": "Promise resolving when request has been aborted, promise is rejected if it takes too long\nto abort the request",
+                "type": "Promise"
+            },
+            "class": "Request",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 18,
+            "description": "Rejects all requests with the given error.\n\nIf the request is running, it will be aborted.",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "requests",
+                    "description": "The list of requests to reject",
+                    "type": "Set"
+                },
+                {
+                    "name": "error",
+                    "description": "The reject's error",
+                    "type": "Error"
+                }
+            ],
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 76,
+            "description": "Web service protocol, either \"http\" or \"https\".",
+            "itemtype": "property",
+            "name": "protocol",
+            "type": "String",
+            "final": 1,
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 85,
+            "description": "Web service server host name.",
+            "itemtype": "property",
+            "name": "hostname",
+            "type": "String",
+            "final": 1,
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 94,
+            "description": "Web service server port.",
+            "itemtype": "property",
+            "name": "port",
+            "type": "Number",
+            "final": 1,
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 103,
+            "description": "Web service URL path.",
+            "itemtype": "property",
+            "name": "path",
+            "type": "String",
+            "final": 1,
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 112,
+            "description": "Application access token provided by the web service.",
+            "itemtype": "property",
+            "name": "accessToken",
+            "type": "String",
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 120,
+            "description": "Path to the web service server certificate file.",
+            "itemtype": "property",
+            "name": "certificate",
+            "type": "String",
+            "final": 1,
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 129,
+            "description": "The collection of queued requests waiting to be executed.",
+            "itemtype": "property",
+            "name": "queuedRequests",
+            "type": "Set",
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 137,
+            "description": "Maximum number of authentication attempts to perform on a request in case of an invalid or expired token.",
+            "itemtype": "property",
+            "name": "maxAuthenticationAttempts",
+            "type": "Number",
+            "default": "1",
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 149,
+            "description": "Executes a GET request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with result as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 168,
+            "description": "Executes a POST request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "post",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 189,
+            "description": "Executes a PATCH request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "patch",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 210,
+            "description": "Executes a PUT request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "put",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 231,
+            "description": "Executes a DELETE request.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed.",
+            "async": 1,
+            "itemtype": "method",
+            "name": "delete",
+            "params": [
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with results as an Object",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if endPoint is not valid a String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 250,
+            "description": "Executes a REST request after making sure the client is authenticated.\n\nIf client is not authenticated or access token has expired, a new authentication is automatically\nperformed and request is retried.",
+            "itemtype": "method",
+            "name": "executeRequest",
+            "async": 1,
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "method",
+                    "description": "The HTTP method to use (either get, post, delete or put)",
+                    "type": "String"
+                },
+                {
+                    "name": "endPoint",
+                    "description": "The web service end point to reach with query parameters",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "return": {
+                "description": "Promise resolving with request's response",
+                "type": "Promise"
+            },
+            "throws": {
+                "description": "Thrown if method or endPoint is not a valid String",
+                "type": "TypeError"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 298,
+            "description": "Indicates if the client is authenticated to the web service or not.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "isAuthenticated",
+            "return": {
+                "description": "true if the client is authenticated, false otherwise",
+                "type": "Boolean"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 309,
+            "description": "Gets the list of headers to send with each request.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "getRequestHeaders",
+            "return": {
+                "description": "The list of headers to add to all requests sent to the server",
+                "type": "Object"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 320,
+            "description": "Authenticates the client to the web service.",
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "itemtype": "method",
+            "name": "authenticate",
+            "return": {
+                "description": "Promise resolving when the client is authenticated, promise is rejected if authentication\nfailed",
+                "type": "Promise"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 357,
+            "description": "Authenticates client to the web service and execute all queued requests.",
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 362,
+            "description": "Interprets response results to get a human readable error message.",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "Web service response with an eventually error property and an httpCode property",
+                    "type": "Object"
+                },
+                {
+                    "name": "request",
+                    "description": "The request associated to the result",
+                    "type": "Request"
+                }
+            ],
+            "return": {
+                "description": "The error message",
+                "type": "String|Null"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 458,
+            "description": "Builds a request.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "buildRequest",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "The list of http(s) options as described by NodeJS http.request documentation",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "body",
+                    "description": "The request body",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "timeout",
+                    "description": "Maximum execution time for the request (in ms), set it to Infinity for a request\nwithout limits",
+                    "type": "Number",
+                    "optional": true,
+                    "optdefault": "10000"
+                },
+                {
+                    "name": "multiparted",
+                    "description": "true to send body as multipart/form-data",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                },
+                {
+                    "name": "resolve",
+                    "description": "The function to call with request's result",
+                    "type": "Function"
+                },
+                {
+                    "name": "reject",
+                    "description": "The function to call if request fails",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "The request, ready to be executed",
+                "type": "Request"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        },
+        {
+            "file": "/home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js",
+            "line": 494,
+            "description": "Gets the list of headers to send with each request.",
+            "itemtype": "method",
+            "name": "getAuthenticationHeaders",
+            "return": {
+                "description": "The list of headers to add to all requests sent to the server",
+                "type": "Object"
+            },
+            "class": "RestClient",
+            "module": "rest-client"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nRejects all requests with the given error.\n\nIf the request is running, it will be aborted.",
+            "line": " /home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js:18"
+        },
+        {
+            "message": "Missing item type\nAuthenticates client to the web service and execute all queued requests.",
+            "line": " /home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js:357"
+        },
+        {
+            "message": "Missing item type\nInterprets response results to get a human readable error message.",
+            "line": " /home/lhawsa/Documents/projects/openveo/openveo-rest-nodejs-client/lib/RestClient.js:362"
+        }
+    ]
+}
