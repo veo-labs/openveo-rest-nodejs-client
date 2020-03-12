@@ -1,3 +1,9 @@
+# 4.0.0 / YYYY-MM-DD
+
+## BREAKING CHANGES
+
+- Drop support for NodeJS &lt; 12.4.0 and NPM &lt; 6.9.0
+
 # 3.1.0 / 2018-10-16
 
 ## NEW FEATURES
