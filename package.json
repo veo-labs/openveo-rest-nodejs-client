@@ -21,7 +21,7 @@
     "url": "https://github.com/veo-labs/openveo-rest-nodejs-client.git"
   },
   "dependencies": {
-    "form-data": "2.3.2"
+    "form-data": "^3.0.0"
   },
   "devDependencies": {
     "grunt": "1.0.1",

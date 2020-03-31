@@ -4,6 +4,10 @@
 
 - Drop support for NodeJS &lt; 12.4.0 and NPM &lt; 6.9.0
 
+## DEPENDENCIES
+
+- **form-data** has been upgraded from 2.3.2 to **3.0.0**
+
 # 3.1.0 / 2018-10-16
 
 ## NEW FEATURES
