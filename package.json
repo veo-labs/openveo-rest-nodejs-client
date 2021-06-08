@@ -33,11 +33,11 @@
     "yuidoc-theme-blue": "^0.1.9"
   },
   "scripts": {
-    "postpublish": "grunt deploy-doc",
-    "eslint": "grunt eslint"
+    "lint": "npx grunt eslint",
+    "postpublish": "npx grunt deploy-doc"
   },
   "precommit": [
-    "eslint"
+    "lint"
   ],
   "engines": {
     "node": ">=16.3.0",
