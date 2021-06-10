@@ -5,7 +5,7 @@
 module.exports = {
 
   // Validate the whole project
-  validate: {
+  'rest-nodejs-client': {
     src: [
       'Gruntfile.js',
       'index.js',
