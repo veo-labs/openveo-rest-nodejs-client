@@ -31,7 +31,7 @@ nbproject
 .gitattributes
 
 # Eslint
-.eslintrc
+.eslintrc.json
 
 # Documentation
 /site

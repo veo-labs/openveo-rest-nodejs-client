@@ -11,6 +11,7 @@
 ## DEPENDENCIES
 
 - **yuidoc** has been replaced by **JSDoc**
+- **grunt-eslint** has been removed
 
 # 4.0.0 / 2020-05-04
 

@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint no-sync: 0 */
+/* eslint node/no-sync: 0 */
 require('./processRequire.js');
 const fs = require('fs');
 
@@ -39,5 +39,4 @@ module.exports = (grunt) => {
 
   // Load grunt extensions
   grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.loadNpmTasks('grunt-eslint');
 };
