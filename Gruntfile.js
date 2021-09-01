@@ -38,11 +38,6 @@ module.exports = (grunt) => {
   grunt.config.merge(loadConfig('./tasks'));
 
   // Load grunt extensions
-  grunt.loadNpmTasks('grunt-contrib-yuidoc');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-eslint');
-
-  // Generate documentation
-  grunt.registerTask('doc', ['yuidoc']);
-
 };

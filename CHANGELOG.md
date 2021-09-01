@@ -4,6 +4,14 @@
 
 - No longer tested on NodeJS &lt; 16.3.0 and NPM &lt; 7.15.1
 
+## NEW FEATURES
+
+- Improve code documentation by replacing Yuidoc by JSDoc
+
+## DEPENDENCIES
+
+- **yuidoc** has been replaced by **JSDoc**
+
 # 4.0.0 / 2020-05-04
 
 ## BREAKING CHANGES
