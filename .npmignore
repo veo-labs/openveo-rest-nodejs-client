@@ -21,11 +21,6 @@ ehthumbs.db
 # IDE
 nbproject
 
-# Grunt
-/Gruntfile.js
-/tasks
-/.grunt
-
 # Git
 .gitignore
 .gitattributes

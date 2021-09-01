@@ -10,8 +10,12 @@
 
 ## DEPENDENCIES
 
-- **yuidoc** has been replaced by **JSDoc**
+- **form-data** has been upgraded from 3.0.0 to **4.0.0**
+- **grunt** has been removed
+- **grunt-cli** has been removed
 - **grunt-eslint** has been removed
+- **grunt-gh-pages** has been replaced by @openveo/api ovDeployGithubPages script
+- **yuidoc** has been replaced by **JSDoc**
 
 # 4.0.0 / 2020-05-04
 
