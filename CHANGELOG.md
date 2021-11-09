@@ -8,6 +8,10 @@
 
 - Improve code documentation by replacing Yuidoc by JSDoc
 
+## BUG FIXES
+
+- Fix error when retrying a request due to an expired token
+
 ## DEPENDENCIES
 
 - **form-data** has been upgraded from 3.0.0 to **4.0.0**
