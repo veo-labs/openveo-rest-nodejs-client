@@ -1,6 +1,6 @@
 {
   "name": "@openveo/rest-nodejs-client",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "NodeJS REST client for OpenVeo Web Service",
   "keywords": [
     "openveo",
@@ -24,7 +24,7 @@
     "form-data": "^4.0.0"
   },
   "devDependencies": {
-    "@openveo/api": "^7.0.0",
+    "@openveo/api": "^8.0.2",
     "eslint": "^7.32.0",
     "eslint-plugin-node": "^11.1.0",
     "jsdoc": "^3.6.7",
