@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: OpenVeoClient.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: OpenVeoClient.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+/**
+ * Defines a client to connect to OpenVeo web service.
+ *
+ * @module openveo-rest-nodejs-client/OpenVeoClient
+ */
+
+const RestClient = process.requireRestClient('lib/RestClient.js');
+
+class OpenVeoClient extends RestClient {
+
+  /**
+   * Creates a client to connect to OpenVeo web service.
+   *
+   * It aims to facilitate the interaction with OpenVeo web service. All authentication aspects are managed by the
+   * client and are transparent to the user. Requesting an end point, without being authenticated, will automatically
+   * authenticate first before calling the end point. If token expired, a new authentication is made automatically.
+   *
+   * @example
+   * const OpenVeoClient = require('@openveo/rest-nodejs-client').OpenVeoClient;
+   * const client = new OpenVeoClient(
+   *   'https://www.openveo-web-service:443',
+   *   'client id',
+   *   'client secret',
+   *   '/absolute/path/to/fullchain/certificate.crt'
+   * );
+   *
+   * @class OpenVeoClient
+   * @extends module:openveo-rest-nodejs-client/RestClient~RestClient
+   * @constructor
+   * @param {String} webServiceUrl The complete URL of the OpenVeo Web Service (with protocol and port)
+   * @param {String} clientId Application's client id
+   * @param {String} clientSecret Application's client secret
+   * @param {String} [certificate] Absolute path to the web service server full chain certificate file
+   * @throws {TypeError} Thrown if webServiceUrl, clientId or clientSecret is not a valid String
+   */
+  constructor(webServiceUrl, clientId, clientSecret, certificate) {
+    super(webServiceUrl, certificate);
+
+    if (!clientId || typeof clientId !== 'string')
+      throw new TypeError(`Invalid client id : ${clientId}`);
+
+    if (!clientSecret || typeof clientSecret !== 'string')
+      throw new TypeError(`Invalid client secret : ${clientSecret}`);
+
+    Object.defineProperties(this,
+
+      /** @lends module:openveo-rest-nodejs-client/OpenVeoClient~OpenVeoClient */
+      {
+
+        /**
+         * Application client id.
+         *
+         * @type {String}
+         * @instance
+         * @readonly
+         */
+        clientId: {value: clientId},
+
+        /**
+         * Application client secret.
+         *
+         * @type {String}
+         * @instance
+         * @readonly
+         */
+        clientSecret: {value: clientSecret},
+
+        /**
+         * Encoded credentials ready for OAuth authentication.
+         *
+         * @type {String}
+         * @instance
+         * @readonly
+         */
+        credentials: {value: Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}
+
+      }
+
+    );
+
+    /**
+     * The authenticate request to get an access token.
+     *
+     * @name authenticateRequest
+     * @type {module:openveo-rest-nodejs-client/Request~Request}
+     * @memberof module:openveo-rest-nodejs-client/OpenVeoClient~OpenVeoClient
+     * @readonly
+     * @instance
+     */
+    Object.defineProperty(this, 'authenticateRequest', {
+      value: this.buildRequest({
+        path: '/token',
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${this.credentials}`,
+          'Content-Type': 'application/json'
+        }
+      }, {grant_type: 'client_credentials'})
+    });
+  }
+
+  /**
+   * Gets the list of headers to send with each request.
+   *
+   * @return {Object} The list of headers to add to all requests sent to the server
+   */
+  getAuthenticationHeaders() {
+    return {
+      Authorization: `Bearer ${this.accessToken}`
+    };
+  }
+
+}
+
+module.exports = OpenVeoClient;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-openveo-rest-nodejs-client_OpenVeoClient.html">openveo-rest-nodejs-client/OpenVeoClient</a></li><li><a href="module-openveo-rest-nodejs-client_Request.html">openveo-rest-nodejs-client/Request</a></li><li><a href="module-openveo-rest-nodejs-client_RestClient.html">openveo-rest-nodejs-client/RestClient</a></li></ul><h3>Classes</h3><ul><li><a href="module-openveo-rest-nodejs-client_OpenVeoClient-OpenVeoClient.html">openveo-rest-nodejs-client/OpenVeoClient~OpenVeoClient</a></li><li><a href="module-openveo-rest-nodejs-client_Request-Request.html">openveo-rest-nodejs-client/Request~Request</a></li><li><a href="module-openveo-rest-nodejs-client_RestClient-RestClient.html">openveo-rest-nodejs-client/RestClient~RestClient</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Nov 19 2021 16:09:11 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
