@@ -1,3 +1,9 @@
+# 5.0.1 / YYYY-MM-DD
+
+## BUG FIXES
+
+- Fix NPM postpublish script
+
 # 5.0.0 / 2021-11-19
 
 ## BREAKING CHANGES
